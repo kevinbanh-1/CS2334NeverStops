@@ -4,7 +4,6 @@ public class SuperStack<T> {
 	private int top;
 	
 
-	@SuppressWarnings("unchecked")
 	public SuperStack(int size) {
 		// TODO Auto-generated constructor stub
 		items = (T[]) new Object[size];
@@ -22,7 +21,7 @@ public class SuperStack<T> {
 		if(isFull()) {
 			return false;
 		}
-		items[top] = item;
+		items[top++] = item;
 		return true;
 	}
 	
