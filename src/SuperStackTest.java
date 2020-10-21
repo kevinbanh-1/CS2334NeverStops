@@ -13,9 +13,12 @@ class SuperStackTest {
 	void testIsEmpty() {
 		// Create an empty stack and check if it's empty
 		// add a few elements and check if it's empty
-		SuperStack<Integer> stack = new SuperStack<Integer>(1);
+		SuperStack<Integer> stack = new SuperStack<>(1);
 		boolean result = stack.isEmpty();
 		assertTrue(result);
+		stack.push(new Integer(0));
+		result = stack.isEmpty();
+		assertFalse(result);
 	}
 
 	@Test
